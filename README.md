@@ -5,7 +5,7 @@ The app lets users track any stock, analyze technical indicators, view financial
 
 ## Live Demo
 
-[Live App](https://your-streamlit-url.streamlit.app)
+[Live App](https://vansh-stockanalyticsdashboard.streamlit.app/)
 
 ## Features
 
