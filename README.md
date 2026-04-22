@@ -50,8 +50,8 @@ The app lets users track any stock, analyze technical indicators, view financial
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/Vansh-Talwar/StockAnalyticsDashboard.git
+cd StockAnalyticsDashboard
 ```
 
 ### 2. Create a virtual environment
@@ -164,22 +164,26 @@ On-demand company news fetched from NewsAPI, sorted by relevancy to the company 
 
 ## Screenshots
 
-> Add screenshots after deployment.
+- Interface  
+  ![Line Chart](image/interface.png)
 
-- Line Chart with SMA  
-  ![Line Chart](images/line.png)
-
+- Volume Chart
+  ![volume](image/volume.png)
+  
 - Candlestick Chart  
-  ![Candlestick](images/candle.png)
+  ![Candlestick](image/candle.png)
 
+-  Line + SMA 
+  ![linesma](image/line.png)
+  
 - RSI Indicator  
-  ![RSI](images/rsi.png)
+  ![RSI](image/indicator.png)
 
-- Volatility Chart  
-  ![Volatility](images/volatility.png)
+- Data and Income Statement  
+  ![dataincome](image/dataincome.png)
 
-- Return Distribution  
-  ![Distribution](images/distribution.png)
+- News 
+  ![news](image/news.png)
 
 ## Future Improvements
 
