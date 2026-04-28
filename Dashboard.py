@@ -72,6 +72,10 @@ else:
     time_unit = "days"
 
 # ── Fetch price data ───────────────────────────────────────
+@st.cache_data(ttl=300)  # cache for 5 minutes
+def fetch_stock_data(ticker, start, end, interval):
+    return yf.download(ticker, start=start, end=end, interval=interval)
+
 period_to_days = {
     '1d': 1,
     '2d': 2,
@@ -89,7 +93,7 @@ end = datetime.now(ist)
 start = end - timedelta(days=period_to_days[time])
 
 with st.spinner("Fetching stock data..."):
-    df = yf.download(ticker, start=start, end=end, interval=interval)
+    df = fetch_stock_data(ticker, start, end, interval)
 
 # ── Empty data check ───────────────────────────────────────
 if df.empty:
@@ -140,8 +144,12 @@ else:
 
 
 # ── Fetch stock info ───────────────────────────────────────
-stock = yf.Ticker(ticker)
-info = stock.info
+@st.cache_data(ttl=300)
+def fetch_stock_info(ticker):
+    stock = yf.Ticker(ticker)
+    return stock.info
+
+info = fetch_stock_info(ticker)
 
 # ── Company overview ───────────────────────────────────────
 st.subheader(info.get('longName', ticker))
