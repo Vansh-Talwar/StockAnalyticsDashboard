@@ -150,6 +150,7 @@ def fetch_stock_info(ticker):
     return stock.info
 
 info = fetch_stock_info(ticker)
+stock = yf.Ticker(ticker)  # recreate for financials
 
 # ── Company overview ───────────────────────────────────────
 st.subheader(info.get('longName', ticker))
